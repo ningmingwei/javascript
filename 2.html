@@ -3,27 +3,40 @@
 <head>
 	<title>js课节2-开灯关灯</title>
 	<script>
+		// 开灯关灯
 		function off_on()
 		{
 			light  = document.getElementById('light');
 			off_or_on = document.getElementById("off_or_on");
-			if (light.src.match('bulboff'))
-			{
-				light.src= "images/pic_bulbon.gif";
-				off_or_on.innerHTML = "关";
+			light.src= light.src.match('bulboff') ? "images/pic_bulbon.gif" : "images/pic_bulboff.gif";
 
+			off_or_on_val = off_or_on.innerHTML;
+			if (off_or_on_val == '开')
+			{
+				off_or_on.innerHTML = '关';
 			}
 			else
 			{
-				light.src = "images/pic_bulboff.gif";
-				off_or_on.innerHTML = "开";
+				off_or_on.innerHTML = '开';
 			}
+
+		}
+
+
+		// 改变背景颜色
+		function change_color()
+		{
+			header = document.getElementById('header');
+			header.style.background = '#585147';
 		}
 		
 	</script>
 </head>
 <body>
-	<img id="light" src="images/pic_bulboff.gif"/>
+	<div id="header" style="width: 100%, padding:10px 10px; background: #CA0C16">
+		<img id="light" src="images/pic_bulboff.gif"/>		
+	</div>
 	<button onclick="off_on()" id="off_or_on">开</button>
+	<button onclick="change_color()">换颜色</button>
 </body>
 </html>
