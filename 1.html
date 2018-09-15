@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js课程1</title>
+	<script>
+		function displayDate()
+		{
+			document.getElementById("demo").innerHTML=Date();
+
+			// 改变第二个内容
+			a = document.getElementById("demo1");
+			a.innerHTML='hello world!';
+		}
+		document.write("<h1>这是一个标题</h1>");
+		document.write("<p>这是第二段落</p>");
+	</script>
+</head>
+<body>
+	<h1>我的第一个javascript</h1>
+	<p id="demo">这是一个段落</p>
+	<p id="demo1">这是一个段落</p>
+	<button type="button" onclick="displayDate()">显示日期和改变内容</button>
+	<button onclick="alert('欢迎')">点我</button>
+</body>
+</html>
