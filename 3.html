@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript的数据类型</title>
+	<script>
+		document.write("<h1>JavaScript的数据类型</h1>");
+
+		// 数组
+		var data_array = [];
+		data_array[0] = 'a';
+		data_array[1] = 'b';
+		console.log(data_array[1]);
+
+		// 对象
+		var data_object = {
+			"id":1, 
+			"name":'ningmingwei' , 
+			"age":25,
+			// 对象方法
+			fulname:function()
+			{
+				return this.id + " " + this.name;
+				
+			}
+		};
+		console.log(data_object); //  等同于console.log(data_object['name'])
+
+		// 点击触发对象方法
+		function my_function()
+		{
+			document.getElementById("demo1").innerHTML = data_object.fulname();
+		}
+
+	</script>
+</head>
+<body>
+	<p id="demo1">我是原始字符</p>
+	<p id="dome" onclick="my_function()">点我</p>
+</body>
+</html>
