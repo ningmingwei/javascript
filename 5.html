@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JavaScript事件</title>
+	<script>
+		document.write("<h1>JavaScript事件</h1>");
+
+		function my_onchange()
+		{
+			demo = document.getElementById('onchange_demo');
+			check_alert = document.getElementById('onchange_check');
+			check_alert.innerHTML = '';
+			if (demo.value.length < 5)
+			{
+				check_alert.style.color = '#EC191B';
+				check_alert.innerHTML = '长度小于5'
+			}
+		}
+
+	</script>
+</head>
+<body>
+	<h2>1、onchange事件（鼠标离开触发函数）</h2>
+	<li><input id="onchange_demo" onchange="my_onchange()"></input><span id="onchange_check"></span></li>
+
+	<h2>2、onclick事件（鼠标点击触发）</h2>
+	<p id="onclick_demo" onclick="this.innerHTML = Date()">点我</p>
+
+	<h2>3、onmouseover（鼠标放上去触发）</h2>
+	<p onmouseover="alert('干嘛打我')" style="width:200px;line-height:30px; background: #EC191B">鼠标放在我身上</p>
+
+	<h2>4、onmouseout（鼠标移开）</h2>
+	<p onmouseout="alert('别走')" style="width:200px;line-height:30px; background: #EC191B">鼠标放到我身上</p>
+
+	<h2>5、onkeydown（用户按下键盘的某个键之后）</h2>
+	<li><input id="onkeydown_demo" onkeydown="document.getElementById('onkeydown_check').innerHTML=this.value"><span id="onkeydown_check"></span></li>
+
+</body>
+</html>

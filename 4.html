@@ -6,15 +6,12 @@
 		document.write("<h1>javascript作用域，F12查看源码</h1>");
 
 		var name = "ning"; // 函数外的为全局变量
+		console.log(window.sex);
 		function my_function()
 		{
 			var age = 25; // 函数内的为局部变量
-			sex = '男';   // 在函数内没有使用var，则为局部变量
+			sex = '男';   // 在函数内没有使用var，则为全局变量
 		}
-
-		console.log(name); // ning
-		console.log(age); // undefind
-		console.log(sex);
 
 		document.write("<p>" + my_function() + "</p>");
 
